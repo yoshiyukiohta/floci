@@ -42,6 +42,12 @@ Standalone `TagResource` rejects reserved `floci:*` keys. `ListTagsForResource` 
 - It validates requested OAuth scopes against the app client's `AllowedOAuthScopes` and the pool's registered resource-server scopes.
 - It advertises the prefixed token endpoint in `/{userPoolId}/.well-known/openid-configuration`.
 
+## Configuration
+
+| Variable | Default | Description |
+|---|---|---|
+| `FLOCI_SERVICES_COGNITO_ENABLED` | `true` | Enable or disable the service |
+
 ## Examples
 
 ```bash
