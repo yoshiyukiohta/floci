@@ -302,6 +302,7 @@ public interface EmulatorConfig {
         TextractServiceConfig textract();
         PricingServiceConfig pricing();
         DuckConfig duck();
+        TranscribeServiceConfig transcribe();
     }
 
     interface TransferServiceConfig {
@@ -655,6 +656,11 @@ public interface EmulatorConfig {
          * {@code <path>/price-lists/<service>.json} are read in preference to the classpath copy.
          */
         Optional<String> snapshotPath();
+    }
+
+    interface TranscribeServiceConfig {
+        @WithDefault("true")
+        boolean enabled();
     }
 
     interface EcrServiceConfig {
